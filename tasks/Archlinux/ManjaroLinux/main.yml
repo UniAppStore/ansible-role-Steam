@@ -1,0 +1,11 @@
+---
+# https://wiki.archlinux.org/title/Steam
+
+- name: Steam packages
+  community.general.pacman:
+    name:
+    - steam
+    - steam-native-runtime
+    state: latest
+    update_cache: true
+  become: true
