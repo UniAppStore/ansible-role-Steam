@@ -1,6 +1,12 @@
 ---
 # https://wiki.archlinux.org/title/Steam
 
+- name: Upgrade whole system (fixes errors)
+  community.general.pacman:
+    upgrade: true
+    update_cache: true
+  become: true
+
 - name: Steam packages
   community.general.pacman:
     name:
